@@ -1,3 +1,4 @@
+
 -- view sample records
 SELECT TOP 10 *
 FROM dbo.Coffee_shop_sales;
@@ -5,8 +6,15 @@ FROM dbo.Coffee_shop_sales;
 ----------------------------------------------------------------------------------------------------------------
 
 -- Count total rows
-SELECT COUNT(*)
+SELECT COUNT(*) AS Row_Count
 FROM dbo.Coffee_shop_sales;
+
+----------------------------------------------------------------------------------------------------------------
+
+-- Count all the columns
+SELECT COUNT(*) AS Column_Count
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'Coffee_shop_sales';
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -51,7 +59,7 @@ FROM dbo.Coffee_shop_sales
 
 ----------------------------------------------------------------------------------------------------------------
 
--- INSPECTING 'money' 
+-- Inspecting 'money' 
 
 -- Check value range and unique patterns
 SELECT DISTINCT ROUND([money], 2) AS [Money]
@@ -76,7 +84,7 @@ ORDER BY rounded_money DESC;
 
 ----------------------------------------------------------------------------------------------------------------
 
--- INSPECTING/VALIDATING coffee_name
+-- Inspecting/Validating coffee_name
 
 -- View all unique coffee product name
 SELECT DISTINCT coffee_name
@@ -232,24 +240,14 @@ WHERE [Time] LIKE '%:%:%:%'  -- 3+ colons
    OR [Time] LIKE '%:%.%'    -- Incorrect time format 
    OR [Time] IS NULL;		 -- Missing values
 /* After inspecting the values, this column was identified as unreliable and 
-unsafe for repair and excluded the cleaning workflow.
+unsafe for repair and excluded the cleaning workflow.*/
 
-
--- Reasoning for Checking for Duplicates
-/* 
-Same sale imported twice from Kaggle
-CSV accidentally duplicated rows
-Flat file import glitch
-Rounding or formatting created false duplicates
-App recorded the same sale twice
-*/
-
-
-
-
-
-SELECT *
+SELECT coffee_name, ROUND(SUM([money]), 2) AS Total_Revenue, COUNT(coffee_name) AS Total_Sold, ROUND(AVG([money]), 2) as Avg_Price
 FROM dbo.Coffee_shop_sales
+GROUP BY coffee_name
+ORDER BY Total_Revenue desc;
+
+----------------------------------------------------------------------------------------------------------------
 
 
 
