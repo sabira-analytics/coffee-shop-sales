@@ -50,7 +50,7 @@ But the raw data had **data quality issues** (date/time format issues, missing v
 - Standardizing text rows and columns with `UPPER/LOWER`
 - Creating permanent cleaned data table using `SELECT` `INTO` with `CTE`and `CASE WHEN` statements before Exporting data to Google sheets 
 
-**Full SQL scripts can be found in the Repository**
+**Full SQL scripts can be found in the Repository and here ->** [SQL](SQL)
 
 ***Key Learning:***
 > Never clean or analyse data blindly - always understand business context first.
@@ -68,7 +68,7 @@ It contains one row per transaction, including:<br>
 - Payment method
 - Transaction amount
 
-**Source:** *Source: Public dataset from Kaggle (“Coffee Shop Sales”).* input Raw csv file link here 
+**Source:** Public dataset from Kaggle [Raw Coffee Shop Sales Data](data/Coffee_shop_sales.csv)  
 **Granularity:** One row = one customer transaction.  
 **Time period:** Sales data across 1 year.  
 **Primary Use:** Time-based trend analysis, product performance analysis, and operational insights. 
@@ -78,12 +78,12 @@ It contains one row per transaction, including:<br>
 ## Table of Contents
 1. [Importing and Inspecting the Dataset](#1-importing-and-inspecting-the-dataset)
 2. [Understanding the Business Context](#2-understanding-the-business-context)
-3. [Data Cleaning & Preparation](#3-data-cleaning--preparation)
+3. [Understanding the RAW DATA](#3-understanding-the-raw-data)
    - [3.1 Column Classification](#31-column-classification)
-   - [3.2 Column-by-Column Inspection](#32-column-by-column-inspection)
+   - [3.2 Column-Level Data Profiling & Transformation Testing](#32-column-level-data-profiling--transformation-testing)
    - [3.3 Cleaning Steps](#33-cleaning-steps)
    - [3.4 Final Cleaned Dataset (SELECT-Based Cleaning)](#34-final-cleaned-dataset-select-based-cleaning)
-   - [3.5 Final Data Quality Checks](#35-final-data-quality-checks)
+   - [3.5 Final Data Quality Verification](#35-final-data-quality-verification)
 4. [Exporting the Cleaned Dataset](#4-exporting-the-cleaned-dataset)
 
 ---
@@ -412,9 +412,11 @@ WHERE [Time] LIKE '%:%:%:%'  -- 3+ colons
    OR [Time] IS NULL;		 -- Missing values
 ```
 
-Based on these inspections, the 'Time' column was classified as a Category C field (unusable) and excluded from the cleaning workflow.  
-***Exploratory data cleaning script can be found in the Repository***  
->input .sql file link here
+Based on these inspections, the 'Time' column was classified as a Category C field (unusable) and excluded from the cleaning workflow. 
+
+---
+
+***Complete sql script for all the above queries can be found in the Repository or*** [SQL Exploratory Data Cleaning Script](SQL/Exploratory_Data_Cleaning_script.sql)
 
 ---
 
@@ -514,9 +516,11 @@ FROM dbo.Coffee_shop_sales_cleaned
 ORDER BY Monthsort;
 ```
 
-All verification checks confirmed that the cleaned dataset met the required quality standards and was ready for export and visualization.  
-***Final SELECT script with quality verification statements can be found in the Repository***  
->input .sql file link here
+All verification checks confirmed that the cleaned dataset met the required quality standards and was ready for export and visualization. 
+
+---
+
+***Final SELECT sql script with quality verification query statements can be found in the Repository*** [Final SELECT Script](SQL/FINAL_SELECT_Script.sql)  
 
 ---
 
@@ -537,12 +541,13 @@ After validating the cleaned dataset, the next step was to export it into a spre
    SQL_Cleaned_Coffee_shop_sales.csv
 6. Open the exported file in Excel or import it into Power BI for visualization.
 
-> Or I also use `Query -> Results To -> Results To File` and then save as CSV file
+> Or I also use Query -> Results To -> Results To File and then save as CSV file
 
-The exported spreadsheet represents the final cleaned dataset that was used for all reporting, visualization, and business insights.  
->input cleaned csv link here
+The exported spreadsheet represents the final cleaned dataset that was used for all reporting, visualisation, and business insights.  
+[Cleaned Coffee Shop Sales CSV](data/Coffee_shop_sales_cleaned.csv)
 
->input visualisation Readme link here
+[Project Visualisation & Business Insights](README.md)
+
 
 
 ---
