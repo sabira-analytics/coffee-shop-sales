@@ -12,9 +12,10 @@
 - Imported into : **SQL Server Management Studio (SSMS)**
 - Total Rows : `3547` 
 - Total Columns : `11` 
-- Raw csv file link -
-- Cleaned csv file link
-- SQL data cleaning logic workflow link here
+- Raw Data - [Raw Coffee Shop Sales CSV](data/Coffee_shop_sales.csv)
+- Cleaned Data - [Cleaned Coffee Shop Sales CSV](data/Coffee_shop_sales_cleaned.csv)
+- Step By Step Rationale - [SQL Data Cleaning Logic Workflow](documentation/SQL%20Data%20Cleaning%20Logic%20Workflow.md)
+
 ---
 
 ## Executive Summary
@@ -240,11 +241,11 @@ This 80/20 breakdown elevates the analysis from descriptive reporting to actiona
 
 To conclude, in addition to the Pareto Analysis, the time-based analyses reinforced these findings by highlighting where operational alignment can further support revenue performance:
 
->**The hourly sales trends** demonstrated a clear concentration of demand during the morning commute period, indicating that staffing, inventory readiness, and service efficiency should be strategically weighted toward the 7 AM - 11 AM window.
+- [x] **The hourly sales trends** demonstrated a clear concentration of demand during the morning commute period, indicating that staffing, inventory readiness, and service efficiency should be strategically weighted toward the 7 AM - 11 AM window.
 
->**The day-of-week patterns** emphasised the significant need for strengthened operational coverage on Tuesday and Friday; highlighting the importance of aligning staffing and inventory with peak weekday demands while using targeted promotions mid-week to improve lower-traffic weekdays, and adjusted Sunday hours to optimise labour costs.
+- [x] **The day-of-week patterns** emphasised the significant need for strengthened operational coverage on Tuesday and Friday; highlighting the importance of aligning staffing and inventory with peak weekday demands while using targeted promotions mid-week to improve lower-traffic weekdays, and adjusted Sunday hours to optimise labour costs.
 
->**Monthly trends** revealed predictable seasonal surges, underscoring the value of proactive stock management, promotional planning, and capacity adjustments during high-demand periods.
+- [x] **Monthly trends** revealed predictable seasonal surges, underscoring the value of proactive stock management, promotional planning, and capacity adjustments during high-demand periods.
 
 Together, these temporal insights provide a focused operational structure outline that complements the Pareto findings—enabling the café to allocate resources where they have the greatest impact on customer experience and revenue outcomes.
 It also establishes a repeatable analytical framework for future data-driven decisions, ensuring that the café continues to prioritise the products and actions that most directly support revenue growth and operational efficiency.
