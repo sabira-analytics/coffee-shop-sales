@@ -100,7 +100,7 @@ With the cleaned dataset exported into Excel, the next phase involved building v
 - **Key Fields:** `hour_of_day` `Cleaned_money`
 - **Chart Type:** Line chart  
 
-![Hourly Sales Trend](Visualization_Images/Coffee_shop_Hourly_sales_trend.png)
+![Hourly Sales Trend](visuals/Coffee_shop_Hourly_sales_trend.png)
 
 ---
 
@@ -124,7 +124,7 @@ With the cleaned dataset exported into Excel, the next phase involved building v
 - **Key Fields:** `Weekday` `Cleaned_money`
 - **Chart Type:** Column chart 
 
-![Sales by Day of Week](Visualization_Images/Coffee_shop_Sales_by_day_of_week.png)
+![Sales By Day Of Week](visuals/Coffee_shop_Sales_by_day_of_week.png)
 
 ---
 
@@ -147,7 +147,7 @@ With the cleaned dataset exported into Excel, the next phase involved building v
 - **Key Fields:** `Month_name` `Cleaned_money`
 - **Chart Type:** Line chart  
 
-![Monthly Sales Trend](Visualization_Images/1Coffee_shop_Monthly_sales_trend.png)
+![Monthly Sales Trend](visuals/1Coffee_shop_Monthly_sales_trend.png)
 
 ---
 
@@ -165,13 +165,13 @@ With the cleaned dataset exported into Excel, the next phase involved building v
 
 ---
 
-#### 4. Product Performance by Coffee Type
+#### 4. Sales Performance by Coffee Type
 - **Business Question:** What products drive the most revenue?
 - **Purpose:** Guide product mix, pricing, and inventory decisions.
 - **Key Fields:** `Cleaned_coffee_name` `Cleaned_money`
 - **Chart Type:** Bar chart
 
-![Product Performance by Coffee Type](Visualization_Images/Sales_performance_by_coffee_type.png)
+![Sales Performance By Coffee Type](visuals/Sales_performance_by_coffee_type.png)
 
 ---
 
@@ -224,7 +224,7 @@ If yes, document this policy in reporting and dashboards.
     - Bars - Revenue by coffee type
     - Line - Cumulative percentage of total revenue
 
-![Pareto Analysis of Coffee Sales](Visualization_Images/Pareto_Analysis_of_Coffee_Sales.png) 
+![Pareto Analysis Of Coffee Sales](visuals/Pareto_Analysis_of_Coffee_Sales.png)
 
 The Pareto Analysis serves as the strategic culmination of this case study, integrating the insights from hourly, daily, monthly, and product-level performance into a unified, business-focused understanding of revenue drivers. While earlier visualizations identified patterns in customer behaviour, sales trends, and highlighted top-selling products, the Pareto approach reframes these findings in terms of **impact** ; quantifying which items truly sustain the business and where operational focus yields the greatest return.
 
