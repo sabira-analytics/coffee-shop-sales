@@ -13,8 +13,11 @@
 - Total Rows : `3547` 
 - Total Columns : `11` 
 - Raw Data - [Raw Coffee Shop Sales CSV](data/Coffee_shop_sales.csv)
+
+### Quick Links
 - Cleaned Data - [Cleaned Coffee Shop Sales CSV](data/Coffee_shop_sales_cleaned.csv)
-- Step By Step Rationale - [SQL Data Cleaning Logic Workflow](documentation/SQL%20Data%20Cleaning%20Logic%20Workflow.md)
+- Rationale - [Data Cleaning Step By Step Logic Workflow](documentation/SQL%20Data%20Cleaning%20Logic%20Workflow.md)
+- SQL Scripts - [Exploratory Cleaning Scrpt](SQL/Exploratory_Data_Cleaning_script.sql) & [Final SELECT Script](SQL/FINAL_SELECT_Script.sql)
 
 ---
 
