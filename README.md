@@ -2,7 +2,7 @@
 
 ---
 
-## End-to-End Case Study
+## End-to-End Case Study With Visualization
 *From Raw Data to Clean Data, Visualizations, Insights, and Strategic Actionable Recommendations*
 
 ### Dataset Source
